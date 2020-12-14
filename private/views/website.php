@@ -20,24 +20,27 @@
 <nav class="navbar smart-scroll navbar-expand-lg navbar-light py-4">
     <div class="container">
         <a class="navbar-brand" href="<?php echo url( 'home' ) ?>">
-            <h2>Logo</h2>
+            <h4 class="logo">Romer Bormann</h4>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="white-color"><i class="fas fa-bars" style="font-size:24px;"></i></span>
+            <span class="white-color"><i class="fas fa-bars"></i></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link pl-5" href="#">Skills</a>
+                    <a class="nav-link pl-5 link-style" href="#skills">Skills</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link pl-5" href="#">Mijn Werk</a>
+                    <a class="nav-link pl-5 link-style" href="#work">Mijn Werk</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link pl-5" href="#">Over Mij</a>
+                    <a class="nav-link pl-5 link-style" href="#in-progress">Mee Bezig</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link pl-5" href="#">Contact</a>
+                    <a class="nav-link pl-5 link-style" href="#about">Over Mij</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link pl-5 link-style" href="#contact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -45,7 +48,8 @@
 </nav>
 
 <!-- HERO SECTION -->
-<div class="container hero">
+<div class="hero">
+    <div class="container">
     <div class="row">
         <div class="col-lg-6 hero-text">
             <h1>Hey, ik ben een <span>creatieve</span> developer.</h1>
@@ -53,18 +57,19 @@
                 Ik ben Romer, een student software developer.<br>
                 Projectmanagement, design & programmeren; ik doe mijn vak met passie.
             </p>
-            <button class="hero__button" type="button">Neem contact op</button>
+            <a class="alt-style" href="#contact"><button class="hero__button" type="button">Neem contact op</button></a>
         </div>
         <div class="col-lg-6 hero__image__div">
             <img class="hero__image" src="<?php echo site_url('/images/romer.png') ?>" alt="Romer Bormann">
         </div>
+    </div>
     </div>
 </div>
 
 <div class="line-break"></div>
 
 <!-- SKILL SECTION -->
-<div class="container skills">
+<div class="container skills" id="skills">
     <div class="row pb-5">
         <div class="col-lg-12 text-center">
             <div class="title">SKILLS</div>
@@ -74,51 +79,50 @@
     <div class="w-layout-grid skill-grid">
         <div class="skill-item">
             <div class="service-title">
-                <div class="service-icon-block">
-                    <img src="<?php echo site_url('/images/icons/development.svg') ?>" class="service-icon" alt="development">
-                </div>
-                <h3 class="service-h3">Projectmanagement</h3>
-            </div>
-            <div>
-                <p>
-                    Zorgen dat alles in goede banen wordt geleidt en dat deadlines gehaald worden. Ik verdiep mijzelf graag in dit onderdeel.
-                </p>
-            </div>
-        </div>
-        <div class="skill-item">
-            <div class="service-title">
-                <div class="service-icon-block">
-                    <img src="<?php echo site_url('/images/icons/development.svg') ?>" class="service-icon" alt="development">
-                </div>
-                <h3 class="service-h3">UX Design</h3>
-            </div>
-            <div>
-                <p>
-                    Ik heb ervaring met het vertalen van een bepaald doel tot een design dat geschikt is voor de doelgroep.
-                </p>
-            </div>
-        </div>
-        <div class="skill-item">
-            <div class="service-title">
-                <div class="service-icon-block">
+                <div class="service-icon-block-blue">
                     <img src="<?php echo site_url('/images/icons/development.svg') ?>" class="service-icon" alt="development">
                 </div>
                 <h3 class="service-h3">Development</h3>
             </div>
             <div>
                 <p>
-                    Het liefste werk ik aan de frond-end, maar ook op de back-end (PHP & Databases) ben ik zeer bekend.
+                    Ik ben voornamelijk bezig met de frond-end. Ik kan inmiddels zonder veel moeite een concept omzetten in een repsonsive website. <br><br> Op het back-end gebied ben ik minder bekend, maar ik ben nu druk bezig met het leren van o.a. PHP-Framework Laravel.
                 </p>
             </div>
         </div>
-
+        <div class="skill-item">
+            <div class="service-title">
+                <div class="service-icon-block-orange">
+                    <img src="<?php echo site_url('/images/icons/briefing.svg') ?>" class="service-icon" alt="development">
+                </div>
+                <h3 class="service-h3">Projectmanagement</h3>
+            </div>
+            <div>
+                <p>
+                    Naast programmeren hou ik mij ook graag bezig met projectmanagement. Een concept tot eindproduct brengen vind ik een mega interessant proces, ik verdiep mij daar ook graag in. <br><br> Ik kan goed overweg met de scrum werkwijze, ik hiervoor voornamelijk het programma "Trello".
+                </p>
+            </div>
+        </div>
+        <div class="skill-item">
+            <div class="service-title">
+                <div class="service-icon-block-red">
+                    <img src="<?php echo site_url('/images/icons/lamp.svg') ?>" class="service-icon" alt="UX design">
+                </div>
+                <h3 class="service-h3">UX Design</h3>
+            </div>
+            <div>
+                <p>
+                    Het idee omzetten naar een prototype; hoe ziet het idee eruit en hoe maken we deze zo gebruiksvriendelijk mogelijk? <br><br> Ik experimenteer veel met Adobe XD. Ik ben geen gevordende op dit gebied, maar ik vind het wel enorm interessant en probeer er daarom regelmatig mee bezig te zijn.
+                </p>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="orange-box"></div>
+<div class="purple-box"></div>
 
 <!-- WORK SECTION -->
-<div class="container py-5">
+<div class="container py-5" id="work">
     <div class="row">
         <div class="col-lg-12">
             <div class="title">MIJN WERK</div>
@@ -126,37 +130,121 @@
         </div>
     </div>
     <div class="row">
-        <div class="work-item col-lg-4 pb-5">
-            <img src="<?php echo site_url('/images/spark.png') ?>" alt="Studio Spark">
+        <div class="work-item col-lg-4 mb-5">
+            <a class="alt-a" href="<?php echo url( 'portfolio/work/spark' ) ?>">
+                <img src="<?php echo site_url('/images/spark.png') ?>" alt="Studio Spark">
+                <div class="card-img-overlay d-flex">
+                    <div class="overlay-text">
+                        <b>Studio Spark</b> <br>
+                        BEDRIJFSWEBSITE
+                    </div>
+                </div>
+            </a>
         </div>
-        <div class="work-item col-lg-4 pb-5">
-            <img src="<?php echo site_url('/images/spark.png') ?>" alt="Studio Spark">
+        <div class="work-item col-lg-4 mb-5">
+            <a class="alt-a" href="<?php echo url( 'portfolio/work/portfolio' ) ?>">
+                <img src="<?php echo site_url('/images/portfolio.png') ?>" alt="Portfolio">
+                <div class="card-img-overlay d-flex">
+                    <div class="overlay-text">
+                        <b>Portfolio</b> <br>
+                        DESIGN & WEBSITE
+                    </div>
+                </div>
+            </a>
         </div>
-        <div class="work-item col-lg-4 pb-5">
-            <img src="<?php echo site_url('/images/spark.png') ?>" alt="Studio Spark">
+        <div class="work-item col-lg-4 mb-5">
+            <a class="alt-a" href="<?php echo url( 'portfolio/work/netwerk' ) ?>">
+                <img src="<?php echo site_url('/images/netwerk.png') ?>" alt="Regionaal Netwerk MBO-HBO">
+                <div class="card-img-overlay d-flex">
+                    <div class="overlay-text">
+                        <b>Regionaal Netwerk MBO-HBO</b> <br>
+                        FORUM
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="work-item col-lg-4 mb-5">
+            <a class="alt-a" href="<?php echo url( 'portfolio/work/globalgoalsjam' ) ?>">
+                <img src="<?php echo site_url('/images/goals.png') ?>" alt="Global Goals Jam">
+                <div class="card-img-overlay d-flex">
+                    <div class="overlay-text">
+                        <b>Global Goals Jam</b> <br>
+                        PROBLEM SOLVING
+                    </div>
+                </div>
+            </a>
         </div>
     </div>
 </div>
 
+<div class="orange-box"></div>
+
+<div class="container py-5" id="in-progress">
+    <div class="row">
+        <div class="col-lg-12 text-right">
+            <div class="title">MEE BEZIG</div>
+            <h1>Huidige Projecten</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="work-item col-lg-4 mb-5">
+            <a class="alt-a" href="<?php echo url( 'portfolio/work/loman-glasbewassing' ) ?>">
+                <img src="<?php echo site_url('/images/loman.png') ?>" alt="Loman Glasbewassing">
+                <div class="card-img-overlay d-flex">
+                    <div class="overlay-text">
+                        <b>Loman Glasbewassing</b> <br>
+                        BEDRIJFSWEBSITE
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="work-item col-lg-4 mb-5">
+            <a class="alt-a" href="<?php echo url( 'portfolio/work/twittor' ) ?>">
+                <img src="<?php echo site_url('/images/twittor.png') ?>" alt="Twittor">
+                <div class="card-img-overlay d-flex">
+                    <div class="overlay-text">
+                        <b>Twittor</b> <br>
+                        LARAVEL APP
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="work-item col-lg-4 mb-5">
+            <a class="alt-a" href="<?php echo url( 'work/vrijpaleis' ) ?>">
+                <img src="<?php echo site_url('/images/vrijpaleis.png') ?>" alt="Vrijpaleis">
+                <div class="card-img-overlay d-flex">
+                    <div class="overlay-text">
+                        <b>Interactief werkstuk voor Vrijpaleis</b> <br>
+                        AR APP
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
 <div class="blue-box"></div>
 
 <!-- ABOUT SECTION -->
-<div class="container py-5">
+<div class="container py-5" id="about">
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-7 align-right">
             <div class="title">AANGENAAM</div>
-            <h1 class="">Hey, ik ben Romer, mediadeveloper</h1>
+            <h1>Hey, ik ben Romer, mediadeveloper</h1>
         </div>
     </div>
     <div class="row pt-4">
-        <div class="col-lg-12">
+        <div class="col-lg-6">
             <p>
-                Hi, my name is Jason and I’m a freelance web designer from San Francisco. I have over 10 years experience in leading teams and shipping complex digital products. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fermentum, libero id efficitur dapibus, nisl metus euismod ex, non elementum quam urna eu risus.
+                Hey! Ik ben Romer. In 2019 startte ik met de opleiding "Mediadevelopment" op het <a href="https://www.ma-web.nl/" class="link-style" target="_blank">Mediacollege Amsterdam</a>. Het mooie aan dit beroep vind ik voornamelijk hoeveel kanten je op kan gaan, juist om DIE reden ben ik zelf nooit bezig met alleen het programmeren, maar ben ik ook bezig op andere gebieden zoals design en projectmanagement. Ik ben dus erg breed inzetbaar en vind het enorm leuk om nieuwe dingen te leren.
             </p>
         </div>
     </div>
-    <div class="row" style="padding-top: 100px">
-        <div class="col-lg-3 contact-item ml-4">
+    <div class="row pt-4">
+        <div class="col-lg-3 w-100 contact-item ml-4 mb-4">
             <a href="https://github.com/RomerBormann" target="_blank" class="text-decoration-none">
                 <div class="py-5 text-center ">
                     <img src="<?php echo site_url('/images/github.png') ?>" alt="github">
@@ -164,7 +252,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-lg-3 contact-item ml-4">
+        <div class="col-lg-3 contact-item ml-4 mb-4">
             <a href="https://www.linkedin.com/in/romer-bormann-3434aa198/" target="_blank" class="text-decoration-none">
                 <div class="py-5 text-center ">
                     <img src="<?php echo site_url('/images/linkedin.png') ?>" alt="linkedin">
@@ -174,6 +262,34 @@
         </div>
     </div>
 </div>
+
+<div class="pink-box"></div>
+
+<!-- CONTACT SECTION -->
+<div class="container my-5" id="contact">
+    <div class="row mt-4">
+        <div class="col-lg-7">
+            <div class="title">NEEM CONTACT OP</div>
+            <h1>Vertel me wat ik voor jou kan betekenen!</h1>
+        </div>
+        <div class="final-contact-item col-lg-5 mb-5 p-4  text-center d-flex">
+            <div class="pt-3 mx-auto">
+                <i class="fas fa-envelope fa-3x pb-3"></i>
+                <a href="mailto:contact@romerbormann.nl"><h5>contact@romerbormann.nl</h5></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER SECTION -->
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-12">
+            <p>© 2020 Romer Bormann</p>
+        </div>
+    </div>
+</div>
+
 
 
 

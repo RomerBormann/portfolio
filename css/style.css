@@ -5,11 +5,13 @@
     --purple-light-font-color: #B4B2C5;
     --purple-lighter-color: #f4f3ff;
     --border-radius: 16px;
+    --orange-light-font-color: #fff4e4;
 }
 
 html {
     font-size: 100%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -20,17 +22,27 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Karla', sans-serif;
+    font-size: 100%;
     overflow-x: hidden;
 }
 
-@media only screen and (max-width: 575px) {
-    .container {
-        padding-left: 3%!important;
-        padding-right: 3% !important;
-    }
+.alt-style {
+    color: #fff; !important;
+    text-decoration: none; !important;
 }
 
-h1, h2, h3, h4, h5, h6, a {
+.alt-style:hover {
+    color: #fafafa; !important;
+    text-decoration: none; !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--main-font-color) !important;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+}
+
+.link-style {
     color: var(--main-font-color) !important;
     line-height: 1.05;
     letter-spacing: -0.03em;
@@ -38,11 +50,17 @@ h1, h2, h3, h4, h5, h6, a {
 
 h1 {
     font-weight: bold;
-    font-size: 64px;
+    font-size: 4rem;
     margin-top: 0;
     margin-bottom: 20px;
     line-height: 1;
     letter-spacing: -0.04em;
+}
+
+@media only screen and (max-width: 425px) {
+    h1 {
+        font-size: 2.6rem;
+    }
 }
 
 h1 span {
@@ -78,7 +96,7 @@ p {
 
 button {
     border-radius: var(--border-radius)!important;
-    padding: 19px 32px;
+    padding: 16px 29px;
     align-items: center;
     background-color: #130f49;
     color: #fff;
@@ -119,7 +137,7 @@ button:focus {
 
 @media only screen and (max-width: 991px) {
     .hero {
-        padding: 100px 0 110px;
+        padding: 50px 0 60px;
     }
 
     .hero-text {
@@ -127,7 +145,11 @@ button:focus {
     }
 
     .hero-text h1 {
-        font-size: 68px;
+        font-size: 50px;
+    }
+
+    .logo {
+        font-weight: bold;
     }
 
     .hero__image__div {
@@ -185,13 +207,32 @@ button:focus {
     align-items: center;
 }
 
-.service-icon-block {
+.service-icon-block-blue {
     width: 65px;
     height: 65px;
     margin-right: 20px;
     padding: 18px;
     border-radius: 20px;
     background-color: #e9f9ff;
+}
+
+.service-icon-block-orange {
+    width: 65px;
+    height: 65px;
+    margin-right: 20px;
+    padding: 18px;
+    border-radius: 20px;
+    background-color: var(--orange-light-font-color);
+}
+
+
+.service-icon-block-red {
+    width: 65px;
+    height: 65px;
+    margin-right: 20px;
+    padding: 18px;
+    border-radius: 20px;
+    background-color: #fff5f6;
 }
 
 .service-icon {
@@ -205,11 +246,27 @@ button:focus {
         padding: 100px 0 110px;
     }
 
-    .w-layout-grid {
+    .skill-grid {
+        margin-right: auto;
+        margin-left: auto;
+        grid-column-gap: 0;
+        grid-row-gap: 24px;
+        display: -ms-grid;
+        display: grid;
+        grid-auto-columns: 1fr;
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-        -ms-grid-rows: auto;
-        grid-template-rows: auto;
+        -ms-grid-rows: auto auto auto auto;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .skill-item {
+        padding: 20px;
+        width: 100vw;
+    }
+
+    .service-icon, .service-icon-block {
+        display: none;
     }
 
 }
@@ -222,6 +279,43 @@ button:focus {
     box-shadow: 10px 0 30px 0 rgba(206, 212, 224, 0.26);
 }
 
+.work-item:last-of-type {
+    margin: 0;
+}
+
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: calc(100% - 30px);
+    opacity: 0;
+    transition: .3s ease;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.60);
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.overlay-text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 100;
+}
+
+.work-item:hover .card-img-overlay {
+    opacity: 1;
+}
+
 .orange-box {
     background-color: #FEECD0;
     height: 430px;
@@ -231,6 +325,17 @@ button:focus {
     border-top-left-radius: 55px;
     border-bottom-left-radius: 55px;
 }
+
+.purple-box {
+    background-color: var(--purple-lighter-color);
+    height: 430px;
+    width: 70%;
+    position: absolute;
+    left: 0;
+    border-top-right-radius: 55px;
+    border-bottom-right-radius: 55px;
+}
+
 
 /* CONTACT */
 .contact-item {
@@ -256,10 +361,55 @@ button:focus {
 /* ABOUT */
 .blue-box {
     background-color: #D9F4FF;
-    height: 80%;
+    height: 60%;
     width: 60%;
     position: absolute;
     left: 0;
     border-top-right-radius: 55px;
     border-bottom-right-radius: 55px;
+}
+
+@media only screen and (max-width: 991px) {
+    .contact-item {
+        margin-left: 0 !important;
+    }
+    form {
+        text-align: center;
+    }
+    #form-input, #form-area {
+        text-align: center;
+    }
+}
+
+/* CONTACT FORM */
+.pink-box {
+    background-color: #FFF5F6;
+    height: 40vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+form {
+    background-color: white;
+    padding: 3rem;
+    border-radius: 32px;
+}
+
+#form-input, #form-area {
+    box-shadow: none !important;
+    resize: none;
+    border-radius: 14px;
+}
+
+#form-input:focus, #form-area:focus {
+    border: 2px solid #f8979b;
+}
+
+.final-contact-item {
+    margin-top: 150px;
+    width: 100%;
+    height: 30vh;
+    background-color: white;
+    border-radius: 20px;
 }

@@ -14,6 +14,16 @@ SimpleRouter::group( [ 'prefix' => site_url() ], function () {
 	SimpleRouter::get( '/', 'WebsiteController@home' )->name( 'home' );
     SimpleRouter::get( '/home', 'WebsiteController@home' )->name( 'home' );
 
+    SimpleRouter::post( '/', 'ContactController@handleContactForm' )->name( 'contact.handle' );
+
+    SimpleRouter::get( '/work/spark', 'WebsiteController@workspark' )->name( 'work.spark' );
+    SimpleRouter::get( '/work/portfolio', 'WebsiteController@workportfolio' )->name( 'work.portfolio' );
+    SimpleRouter::get( '/work/netwerk', 'WebsiteController@worknetwerk' )->name( 'work.netwerk' );
+    SimpleRouter::get( '/work/globalgoalsjam', 'WebsiteController@workgoals' )->name( 'work.goals' );
+    SimpleRouter::get( '/work/loman-glasbewassing', 'WebsiteController@workloman' )->name( 'work.loman' );
+    SimpleRouter::get( '/work/twittor', 'WebsiteController@worktwittor' )->name( 'work.twittor' );
+    SimpleRouter::get( '/work/vrijpaleis', 'WebsiteController@workvrijpaleis' )->name( 'work.vrijpaleis' );
+
     // STOP: Tot hier al je eigen URL's zetten
 	SimpleRouter::get( '/not-found', function () {
 		http_response_code( 404 );

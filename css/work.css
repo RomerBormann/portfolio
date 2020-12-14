@@ -1,0 +1,90 @@
+:root {
+    --main-font-color: #130F49;
+    --orange-font-color: #E7A741;
+    --purple-font-color: #55527C;
+    --purple-light-font-color: #B4B2C5;
+    --purple-lighter-color: #f4f3ff;
+    --border-radius: 16px;
+}
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+    overflow-x: hidden;
+}
+
+@media only screen and (max-width: 575px) {
+    .container {
+        padding-left: 3%!important;
+        padding-right: 3% !important;
+    }
+}
+
+@media only screen and (max-width: 911px) {
+    .logo {
+        display: none;
+    }
+}
+
+.alt-style {
+    color: #fff; !important;
+    text-decoration: none; !important;
+}
+
+.alt-style:hover {
+    color: #fafafa; !important;
+    text-decoration: none; !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--main-font-color) !important;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+}
+
+.link-style {
+    color: var(--main-font-color) !important;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 64px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+h1 span {
+    color: var(--orange-font-color);
+}
+
+h3 {
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+}
+
+p {
+    font-size: 18px;
+    color: var(--purple-font-color);
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+img {
+    max-width: 100%;
+}
