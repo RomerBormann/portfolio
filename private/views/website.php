@@ -51,7 +51,7 @@
 <div class="hero">
     <div class="container">
     <div class="row">
-        <div class="col-lg-6 hero-text">
+        <div class="col-md-6 hero-text mb-5">
             <h1>Hey, ik ben een <span>creatieve</span> developer.</h1>
             <p>
                 Ik ben Romer, een student software developer.<br>
@@ -59,8 +59,8 @@
             </p>
             <a class="alt-style" href="#contact"><button class="hero__button" type="button">Neem contact op</button></a>
         </div>
-        <div class="col-lg-6 hero__image__div">
-            <img class="hero__image" src="<?php echo site_url('/images/romer.png') ?>" alt="Romer Bormann">
+        <div class="col-md-6">
+            <img class="rounded-circle" src="<?php echo site_url('/images/romer.png') ?>" alt="Romer Bormann" style="object-fit: cover; width: 350px; max-width: 90vw;">
         </div>
     </div>
     </div>
@@ -86,7 +86,7 @@
             </div>
             <div>
                 <p>
-                    Ik ben voornamelijk bezig met de frond-end. Ik kan inmiddels zonder veel moeite een concept omzetten in een repsonsive website. <br><br> Op het back-end gebied ben ik minder bekend, maar ik ben nu druk bezig met het leren van o.a. PHP-Framework Laravel.
+                    Ik ben voornamelijk bezig met de front-end. Ik kan inmiddels zonder veel moeite een concept omzetten in een responsive website. <br><br> Op het back-end gebied ben ik minder bekend, maar ik ben nu druk bezig met het leren van o.a. PHP-Framework Laravel.
                 </p>
             </div>
         </div>
@@ -95,11 +95,11 @@
                 <div class="service-icon-block-orange">
                     <img src="<?php echo site_url('/images/icons/briefing.svg') ?>" class="service-icon" alt="development">
                 </div>
-                <h3 class="service-h3">Projectmanagement</h3>
+                <h3 class="service-h3">Project-<br>management</h3>
             </div>
             <div>
                 <p>
-                    Naast programmeren hou ik mij ook graag bezig met projectmanagement. Een concept tot eindproduct brengen vind ik een mega interessant proces, ik verdiep mij daar ook graag in. <br><br> Ik kan goed overweg met de scrum werkwijze, ik hiervoor voornamelijk het programma "Trello".
+                    Naast programmeren hou ik mij ook graag bezig met projectmanagement. Een concept tot eindproduct brengen vind ik een mega interessant proces, ik verdiep mij daar ook graag in. <br><br> Ik kan goed overweg met de scrum werkwijze, ik gebruik hiervoor voornamelijk het programma "Trello".
                 </p>
             </div>
         </div>
@@ -112,7 +112,7 @@
             </div>
             <div>
                 <p>
-                    Het idee omzetten naar een prototype; hoe ziet het idee eruit en hoe maken we deze zo gebruiksvriendelijk mogelijk? <br><br> Ik experimenteer veel met Adobe XD. Ik ben geen gevordende op dit gebied, maar ik vind het wel enorm interessant en probeer er daarom regelmatig mee bezig te zijn.
+                    Het idee omzetten naar een prototype; hoe ziet het idee eruit en hoe maken we deze zo gebruiksvriendelijk mogelijk? <br><br> Ik experimenteer veel met Adobe XD. Ik ben geen gevorderde op dit gebied, maar ik vind het wel enorm interessant en probeer er daarom regelmatig mee bezig te zijn.
                 </p>
             </div>
         </div>
@@ -176,6 +176,17 @@
                 </div>
             </a>
         </div>
+        <div class="work-item col-lg-4 mb-5">
+            <a class="alt-a" href="<?php echo url( 'portfolio/work/loman-glasbewassing' ) ?>">
+                <img src="<?php echo site_url('/images/loman.png') ?>" alt="Loman Glasbewassing">
+                <div class="card-img-overlay d-flex">
+                    <div class="overlay-text">
+                        <b>Loman Glasbewassing</b> <br>
+                        BEDRIJFSWEBSITE
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
 </div>
 
@@ -188,18 +199,7 @@
             <h1>Huidige Projecten</h1>
         </div>
     </div>
-    <div class="row">
-        <div class="work-item col-lg-4 mb-5">
-            <a class="alt-a" href="<?php echo url( 'portfolio/work/loman-glasbewassing' ) ?>">
-                <img src="<?php echo site_url('/images/loman.png') ?>" alt="Loman Glasbewassing">
-                <div class="card-img-overlay d-flex">
-                    <div class="overlay-text">
-                        <b>Loman Glasbewassing</b> <br>
-                        BEDRIJFSWEBSITE
-                    </div>
-                </div>
-            </a>
-        </div>
+    <div class="row flex-row-reverse">
         <div class="work-item col-lg-4 mb-5">
             <a class="alt-a" href="<?php echo url( 'portfolio/work/twittor' ) ?>">
                 <img src="<?php echo site_url('/images/twittor.png') ?>" alt="Twittor">
@@ -212,7 +212,7 @@
             </a>
         </div>
         <div class="work-item col-lg-4 mb-5">
-            <a class="alt-a" href="<?php echo url( 'work/vrijpaleis' ) ?>">
+            <a class="alt-a" href="<?php echo url( 'portfolio/work/vrijpaleis' ) ?>">
                 <img src="<?php echo site_url('/images/vrijpaleis.png') ?>" alt="Vrijpaleis">
                 <div class="card-img-overlay d-flex">
                     <div class="overlay-text">

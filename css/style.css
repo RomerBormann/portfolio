@@ -120,7 +120,7 @@ button:focus {
 
 /* HERO */
 .hero {
-    padding: 150px 0 122px;
+    padding: 100px 0 100px;
 }
 
 .hero-text {
@@ -152,16 +152,6 @@ button:focus {
         font-weight: bold;
     }
 
-    .hero__image__div {
-        margin-top: 40px;
-        padding: 14px;
-        display: flex;
-    }
-
-    .hero__image {
-        margin: 0 auto;
-        width: 80%;
-    }
 }
 
 /* SKILLS */
@@ -236,8 +226,7 @@ button:focus {
 }
 
 .service-icon {
-    max-width: 100%;
-    width: 45px;
+    width: 26px;
 }
 
 
@@ -263,10 +252,6 @@ button:focus {
     .skill-item {
         padding: 20px;
         width: 100vw;
-    }
-
-    .service-icon, .service-icon-block {
-        display: none;
     }
 
 }

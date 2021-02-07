@@ -19,12 +19,12 @@
 <!-- NAVIGATION -->
 <nav class="navbar smart-scroll navbar-expand-lg navbar-light py-4">
     <div class="container">
-        <a class="navbar-brand d-flex" href="<?php echo url( 'home' ) ?>#work">
+        <a class="navbar-brand d-flex" href="javascript:history.back()">
             <i class="fas fa-arrow-left my-auto"></i>
             &nbsp;
             <h4 class="my-auto">Ga terug</h4>
         </a>
-        <a class="navbar-brand" href="<?php echo url( 'home' ) ?>#work">
+        <a class="navbar-brand" href="javascript:history.back()">
             <h4 class="logo">Romer Bormann</h4>
         </a>
     </div>
